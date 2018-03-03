@@ -1,5 +1,5 @@
 const robotjs = require("robotjs"),
-      monitor = require("active-window");
+      activeWin = require("active-win");
 
 function minutes(n) {
     return n * seconds(60);
@@ -7,13 +7,15 @@ function minutes(n) {
 function seconds (n) {
     return n * 1000;
 }
+function isSaiWindow(w) {
+    console.log("active window",w)
+    if(/sai/i.test(w.owner.name)) {
+        robotjs.tapKey("s","control");
+    }
+}
 setInterval(() => {
-    monitor.getActiveWindow((w) => {
-        console.log("active window",w);
-        if(/sai/i.test(w.app)) {
-            robotjs.tapKey("s","control");
-        }
-    });
+    activeWin()
+        .then(isSaiWindow)
 },1000);
 
 

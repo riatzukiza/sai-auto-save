@@ -2,7 +2,7 @@
     "name": "auto-save-sai",
     "author": "Aaron Beavers",
     "dependencies": {
-        "active-window": "*",
+        "active-win": "*",
         "robotjs": "*"
     }
 }
