@@ -10,7 +10,7 @@ function seconds (n) {
 function isSaiWindow(w) {
     console.log("active window",w)
     if(/sai/i.test(w.owner.name)) {
-        robotjs.tapKey("s","control");
+        robotjs.keyTap("s","control");
     }
 }
 setInterval(() => {
