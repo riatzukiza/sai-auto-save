@@ -1,0 +1,8 @@
+{
+    "name": "auto-save-sai",
+    "author": "Aaron Beavers",
+    "dependencies": {
+        "active-window": "*",
+        "robotjs": "*"
+    }
+}
