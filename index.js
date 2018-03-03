@@ -8,8 +8,13 @@ function seconds (n) {
     return n * 1000;
 }
 setInterval(() => {
-    monitor.getActiveWindow((w) => console.log("active window",w))
-},1000)
+    monitor.getActiveWindow((w) => {
+        console.log("active window",w);
+        if(/sai/i.test(w.app)) {
+            robotjs.tapKey("s","control");
+        }
+    });
+},1000);
 
 
 
